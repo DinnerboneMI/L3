@@ -10,9 +10,9 @@ class Settings:
     base_url: str = (
         "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data"
     )
-    years: List[int] = None  # type: ignore[assignment]
-    geos: List[str] = None   # type: ignore[assignment]
-    sexes: List[str] = None  # type: ignore[assignment]
+    years: List[int] = None
+    geos: List[str] = None
+    sexes: List[str] = None
     target_2030: float = 9.0
 
     def __post_init__(self) -> None:
@@ -23,3 +23,4 @@ class Settings:
     @property
     def endpoint(self) -> str:
         return f"{self.base_url}/{self.dataset_code}"
+

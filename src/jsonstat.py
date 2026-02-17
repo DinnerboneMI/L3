@@ -12,7 +12,6 @@ def _dimension_ids(js: Dict[str, Any]) -> Sequence[str]:
     dim = js.get("dimension", {})
     if "id" in dim and isinstance(dim["id"], list):
         return dim["id"]
-    # fallback: take keys except service keys
     return [k for k in dim.keys() if k not in ("id", "size")]
 
 
@@ -46,3 +45,4 @@ def jsonstat_to_df(js: Dict[str, Any]) -> pd.DataFrame:
 
     df["value"] = vals
     return df
+

@@ -40,8 +40,8 @@ def main() -> None:
 
     summary["distance_to_9%_target_pp (total)"] = summary["total_%"] - settings.target_2030
 
-    summary_path = outdir / "latest_summary.csv"
-    trend_path = outdir / "lt_total_trend.csv"
+    summary_path = outdir / "latest_summary.xlsx"
+    trend_path = outdir / "lt_total_trend.xlsx"
     plot_path = outdir / "trend_lt_vs_eu.png"
 
     summary.to_excel(outdir / "latest_summary.xlsx", index=False)
@@ -67,3 +67,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

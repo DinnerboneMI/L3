@@ -27,3 +27,18 @@ def plot_lt_vs_eu_total(
     plt.legend()
     plt.tight_layout()
     plt.savefig(out_path, dpi=200)
+
+def plot_lt_absolute_count(
+    df_abs: pd.DataFrame,
+    out_path: Path,
+) -> None:
+    plt.figure()
+    part = df_abs.sort_values("time")
+    plt.plot(part["time"], part["early_leavers_count"], label="Lithuania (absolute)")
+
+    plt.title("Early leavers (18–24), Lithuania — absolute count (estimated)")
+    plt.xlabel("Year")
+    plt.ylabel("People (18–24)")
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(out_path, dpi=200)

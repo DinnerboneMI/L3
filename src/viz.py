@@ -27,6 +27,7 @@ def plot_lt_vs_eu_total(
     plt.legend()
     plt.tight_layout()
     plt.savefig(out_path, dpi=200)
+    plt.close()
 
 def plot_lt_absolute_count(
     df_abs: pd.DataFrame,
@@ -42,3 +43,5 @@ def plot_lt_absolute_count(
     plt.legend()
     plt.tight_layout()
     plt.savefig(out_path, dpi=200)
+    plt.close()
+
